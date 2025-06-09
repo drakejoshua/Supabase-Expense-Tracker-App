@@ -3,13 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/drakejoshua/Supabase-Expense-Tracker-App.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d ./dist"
+    "deploy": "gh-pages -d ./dist --repo https://github.com/drakejoshua/Supabase-Expense-Tracker-App.git"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.8",
