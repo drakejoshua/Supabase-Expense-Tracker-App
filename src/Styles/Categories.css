@@ -1,0 +1,80 @@
+/* 
+    stylesheet for categories route/Categories.jsx
+
+    it uses a BEM style of route--block__element--state
+*/
+
+.categories {
+    padding: var(--route-padding);
+}
+
+.categories--category__no-transactions {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+.categories--chart-area {
+    height: 350px;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: var(--brand-pale-white);
+    color: var(--brand-black);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.categories--category {
+    margin: 40px 0px;
+}
+.categories--category__header {
+    padding: 40px 30px;
+    background-color: var(--brand-black);
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    /* gap: 10px; */
+}
+.categories--category__header * {
+    color: var(--brand-white);
+    fill: var(--brand-white);
+}
+.categories--category__header-icon {
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+.categories--category__header-title {
+    font-size: 2.3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 60%;
+}
+.categories--category__header-settings-btn {
+    margin-left: auto;
+    overflow: hidden;
+}
+.categories--category__header-settings-icon {
+    display: block;
+    font-size: 1.9rem;
+}
+.categories--category__pagination-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 0px 0px 8px 8px;
+}

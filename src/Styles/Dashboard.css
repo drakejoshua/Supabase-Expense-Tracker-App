@@ -1,0 +1,334 @@
+/* 
+    stylesheet for dashboard route/Dashboard.jsx
+
+    it uses a BEM style of route--block__element--state
+*/
+
+
+/* style for the landing page that is to be displayed */
+/* if no user is logged in */
+
+
+.landing-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main-heading {
+    margin: 80px auto 20px;
+    width: 50%;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+    text-align: center;
+}
+.main-subtext {
+    width: 30%;
+    text-align: center;
+    margin: 0px auto 20px;
+}
+.main-cta-ctn {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    margin: auto;
+}
+.main-cta {
+    border: 2px solid transparent;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 7px 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.primary {
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+}
+.primary > * {
+    fill: var(--brand-white);
+}
+.secondary {
+    border-color: var(--brand-black);
+}
+
+.features {
+    padding: 20px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+.feature {
+    padding: 30px;
+    width: 30%;
+    border: 2px solid var(--brand-black);
+    border-radius: 10px;
+}
+.feature:hover {
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+}
+.feature:hover * {
+    color: var(--brand-white);
+}
+.feature-icon {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+.feature-heading {
+    margin-bottom: 10px;
+    /* width: 80%; */
+    text-transform: capitalize;
+}
+
+
+
+/* styles for the dashboard to be displayed */
+/* if there's a currently logged-in user */
+.dashboard, .dashboard-loading, .dashboard-error {
+    padding: var(--route-padding);
+}
+.dashboard-loading {
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    gap: 20px;
+}
+.dashboard-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.dashboard-error--content__message {
+    margin-bottom: 20px;
+} 
+.dashboard-error--content__icon {
+    font-size: 3rem;
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+.dashboard-error--content__text {
+    margin-top: 20px;
+}
+.dashboard-error--content__retry-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin: auto;
+    text-transform: capitalize;
+}
+.dashboard-error--content__retry-icon {
+    fill: var(--brand-white);
+    color: var(--brand-white);
+    font-size: 1.2rem;
+}
+.dashboard-loading--spinner {
+    height: 50px;
+    width: 50px;
+    border: 8px solid var(--brand-pale-white);
+    border-top: 8px solid var(--brand-black);
+    border-radius: 100%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.dashboard--recent-transactions__list--no-transactions {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+.dashboard--greeting {
+    text-transform: capitalize;
+}
+.dashboard--balance {
+    margin-top: 8px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+}
+.dashboard--add-new-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--brand-black);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard--add-new-btn__icon {
+    color: var(--brand-white);
+    fill: var(--brand-white);
+    font-size: 1.8rem;
+}
+.dashboard--summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.dashboard--summary__income-summary,
+.dashboard--summary__expense-summary {
+    padding: 30px 40px;
+    border: medium solid var(--brand-pale-white);
+    border-radius: 10px;
+    width: 48%;
+}
+.dashboard--general__child--border-hover:hover {
+    transition: 0.5s;
+    border-color: var(--brand-black);
+}
+.dashboard--summary__title {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.dashboard--summary__value {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.dashboard--chart {
+    margin-top: 20px;
+}
+.dashboard--chart__heading {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.dashboard--chart__chart {
+    height: 350px;
+    margin-top: 20px;
+    background-color: var(--brand-pale-white);
+    padding: 15px 30px;
+    color: var(--brand-black);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.dashboard--categories-summary {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.dashboard--categories-summary__category {
+    padding: 20px 40px;
+    border: medium solid var(--brand-pale-white);
+    border-radius: 10px;
+    width: 48%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.dashboard--categories-summary__icon {
+    font-size: 2.5rem;
+}
+.dashboard--categories-summary__category-details {
+    display: flex;
+    flex-direction: column;
+}
+.dashboard--categories-summary__title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.dashboard--categories-summary__value {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.dashboard--recent-transactions {
+    margin-top: 40px;
+}
+.dashboard--recent-transactions__heading {
+    text-transform: capitalize;
+}
+.dashboard--recent-transactions__list {
+    margin-top: 20px;
+}
+
+
+@media screen and ( max-width: 1100px ) {
+    .main-heading {
+        width: 60%;
+        font-size: 2rem;
+    }
+    .main-subtext {
+        width: 50%;
+    }
+    .features {
+        padding: 20px 10px;
+        gap: 20px;
+        justify-content: center;
+    }
+    .feature {
+        width: 40%;
+    }
+    .main-cta-ctn {
+        gap: 10px;
+    }
+}
+@media screen and ( max-width: 500px ) {
+    .dashboard--summary__income-summary,
+    .dashboard--summary__expense-summary {
+        width: 100%;
+    }
+    .dashboard--categories-summary__category {
+        width: 100%;
+    }
+    .main-heading {
+        width: 93%;
+        font-size: 2rem;
+    }
+    .main-subtext {
+        width: 90%;
+    }
+    .features {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    .feature {
+        width: 100%;
+    }
+    .main-cta-ctn {
+        gap: 10px;
+    }
+}

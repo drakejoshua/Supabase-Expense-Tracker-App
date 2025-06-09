@@ -1,0 +1,131 @@
+/* 
+    stylesheet for transactions route/Transactions.jsx
+
+    it uses a BEM style of route--block__element--state
+*/
+
+
+.transactions {
+    padding: var(--route-padding);
+    height: 100%;
+}
+.transactions--not-found {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.transactions--not-found__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+.transactions--not-found__header {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.transactions--searchbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+.transactions--searchbar__search {
+    width: 90%;
+    padding: 10px;
+    border: medium solid var(--brand-black);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;  
+}
+.transactions--searchbar__search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.transactions--searchbar__search-input::placeholder {
+    color: var(--brand-black);
+    opacity: 0.5;
+}
+.transactions--searchbar__filter-btn,
+.transactions--searchbar__order-btn {
+    background-color: var(--brand-black);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.transactions--searchbar__filter-btn-icon,
+.transactions--searchbar__order-btn-icon {
+    color: var(--brand-white);
+    font-size: 1.2rem;
+    fill: var(--brand-white);
+}
+.transactions--list {
+    margin-top: 10px;
+}
+.transactions--searchbar__filter-options {
+    padding: 15px 10px;
+    background-color: var(--brand-white);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px lightgray;
+    display: flex;
+    flex-direction: column;
+}
+.transactions--searchbar__filter-option {
+    display: flex;
+    gap: 7px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 8px 15px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+.transactions--searchbar__filter-option--selected {
+    background-color: var(--brand-black);
+}
+.transactions--searchbar__filter-option--selected > * {
+    color: var(--brand-white);
+    fill: var(--brand-white);
+}
+.transactions--searchbar__filter-option:hover {
+    background-color: var(--brand-black);
+}
+.transactions--searchbar__filter-option:hover > * {
+    color: var(--brand-white);
+    fill: var(--brand-white);
+}
+.transactions--searchbar__filter-icon {
+    font-size: 1.1rem;
+}
+.transactions--searchbar__filter-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.transcations--list-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.transcations--list-pagination__status {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.transcations--list-pagination__buttons {
+    display: flex;
+    gap: 20px;
+}
+.transcations--list-pagination__button {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+    font-weight: 700;
+}

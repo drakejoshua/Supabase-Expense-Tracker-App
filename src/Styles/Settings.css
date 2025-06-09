@@ -1,0 +1,62 @@
+/* 
+    stylesheet for settings route/Settings.jsx
+
+    it uses a BEM style of route--block__element--state
+*/
+
+
+.settings {
+    padding: var(--route-padding);
+}
+.settings--details-form {
+    min-width: 240px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.settings--details-form__password-ctn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 2.5px solid var(--brand-black);
+    padding: 11px;
+    border-radius: 5px;
+}
+.settings--details-form__password-input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.settings--details-form__password-toggle {
+    font-size: 1.3rem;
+}
+.settings--details-form__password-icon {
+    display: block;
+}
+.settings--details-form__submit-btn,
+.settings--log-out-btn {
+    background-color: var(--brand-black);
+    color: var(--brand-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.settings--log-out-btn {
+    margin-top: 30px;
+}
+.settings--log-out-btn__icon,
+.settings--details-form__submit-icon {
+    color: var(--brand-white);
+    fill: var(--brand-white);
+}

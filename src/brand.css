@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* style variables */
+:root {
+    --brand-cream: #fff1e6;
+    --brand-black: #333;
+    --brand-white: #ffffff;
+    --brand-pale-white: #f0f0f0;
+    --brand-cream-const: #fff1e6;
+    --brand-black-const: #333;
+    --brand-white-const: #ffffff;
+    --brand-pale-white-const: #f0f0f0;
+    --brand-cream-half-opacity: #fff1e694;
+    --brand-black-half-opacity: #3333338a;
+    --brand-white-half-opacity: #ffffff8e;
+    --brand-pale-white-half-opacity: #f0f0f08e;
+    --brand-box-shadow: 1px 1px 10px lightgray;
+}
+
+
+/* reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: var(--brand-black);
+}
+html, body {
+    height: 100%;
+    background-color: var(--brand-white);
+}

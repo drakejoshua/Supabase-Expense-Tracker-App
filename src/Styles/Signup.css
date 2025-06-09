@@ -1,0 +1,92 @@
+/* 
+    stylesheet for signup route/Signup.jsx
+
+    it uses a BEM style of route--block__element--state
+*/
+
+
+.signup {
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    margin: auto;
+    padding: 13vh 20px 0px;
+}
+.signup--logo {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 0px auto 40px;
+}
+.signup--logo__text {
+    font-weight: 700;
+}
+.signup--form-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.signup--form-divider__line {
+    height: 2px;
+    background-color: var(--brand-black);
+    flex-grow: 1;
+}
+.signup--form-divider__text {
+    font-size: 1.2rem;
+}
+.signup--form-socials {
+    margin: 10px 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    justify-content: center;
+}
+.signup--form-socials__button {
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand-black);
+}
+.signup--form-socials__icon {
+    display: block;
+    color: var(--brand-white);
+    fill: var(--brand-white);
+    font-size: 1.3rem;
+}
+.signup--login-text {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.signup--login-text__link {
+    text-decoration: underline;
+}
+.signup--form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.signup--form-options__remember-option {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.signup--form-options__remember-checkbox {
+    height: 20px;
+    width: 20px;
+}
+.signup--form-options__remember-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.signup--form-options__reset-option {
+    text-decoration: underline;
+}
