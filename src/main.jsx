@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <ThemeProvider>
         <ResponsiveProvider>
-          <RouterProvider router={ router }/>
+          <RouterProvider router={ router } basename='./'/>
         </ResponsiveProvider>
       </ThemeProvider>
     </AuthProvider>

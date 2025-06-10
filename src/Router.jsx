@@ -13,7 +13,7 @@
  */
 
 
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -23,7 +23,7 @@ import Settings from './pages/Settings'
 import NotFound from './pages/NotFound'
 import ProtectedRoute from './components/ProtectedRoute';
 
-export const router = createBrowserRouter( [
+export const router = createHashRouter( [
     { 
         path: '/', element: <Dashboard/> 
     },
